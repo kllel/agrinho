@@ -3,311 +3,693 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Agrinho Paraná 2026</title>
+
+<title>Agrinho 2026 | Agro Forte, Futuro Sustentável</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-    font-family:Segoe UI, Arial, sans-serif;
-    background:#f5fff6;
-    color:#333;
+background:#081b15;
+color:white;
+overflow-x:hidden;
+}
+
+#particles-js{
+position:fixed;
+width:100%;
+height:100%;
+z-index:-1;
 }
 
 header{
-    height:100vh;
-    background:linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
-    url("https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1600&q=80");
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:white;
-    padding:20px;
+position:fixed;
+width:100%;
+top:0;
+padding:20px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+backdrop-filter:blur(15px);
+background:rgba(255,255,255,0.05);
+z-index:1000;
 }
 
-header h1{
-    font-size:4rem;
-    margin-bottom:15px;
-}
-
-header p{
-    font-size:1.3rem;
-    max-width:900px;
-}
-
-.botao{
-    margin-top:30px;
-    background:#2e8b57;
-    color:white;
-    text-decoration:none;
-    padding:14px 30px;
-    border-radius:30px;
-    font-weight:bold;
-    transition:0.3s;
-}
-
-.botao:hover{
-    background:#236944;
-}
-
-nav{
-    background:#2e8b57;
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
-
-nav ul{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    list-style:none;
-}
-
-nav li{
-    margin:15px;
+.logo{
+font-size:1.5rem;
+font-weight:800;
+color:#00ff88;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
+color:white;
+text-decoration:none;
+margin-left:25px;
+transition:.3s;
 }
 
-section{
-    padding:80px 10%;
+nav a:hover{
+color:#00ff88;
 }
 
-h2{
-    text-align:center;
-    color:#2e8b57;
-    margin-bottom:25px;
-    font-size:2.2rem;
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),
+url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854') center/cover;
 }
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+.hero-content{
+max-width:1000px;
+}
+
+.hero h1{
+font-size:5rem;
+font-weight:900;
+line-height:1.1;
+background:linear-gradient(90deg,#00ff88,#00c3ff,#ffd700);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.typing{
+font-size:1.4rem;
+margin:20px 0;
+height:40px;
+}
+
+.btn{
+padding:15px 35px;
+background:linear-gradient(45deg,#00ff88,#00c3ff);
+border:none;
+border-radius:40px;
+font-size:1rem;
+font-weight:700;
+cursor:pointer;
+transition:.4s;
+}
+
+.btn:hover{
+transform:scale(1.08);
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+padding:80px 8%;
 }
 
 .card{
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.1);
+border-radius:25px;
+padding:30px;
+text-align:center;
+transition:.4s;
 }
 
-.card h3{
-    color:#2e8b57;
-    margin-bottom:10px;
+.card:hover{
+
+transform:
+perspective(1000px)
+rotateX(5deg)
+rotateY(5deg)
+translateY(-10px);
+
+box-shadow:
+0 20px 40px rgba(0,255,136,.3);
+
 }
 
-.galeria{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:20px;
+.card h2{
+font-size:3rem;
+color:#00ff88;
 }
 
-.galeria img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
-    border-radius:15px;
+.section{
+padding:120px 8%;
 }
 
-.conclusao{
-    background:white;
-    border-radius:15px;
-    padding:30px;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
+.section-title{
+text-align:center;
+font-size:3rem;
+margin-bottom:60px;
 }
 
-footer{
-    background:#2e8b57;
-    color:white;
-    text-align:center;
-    padding:25px;
+.tech-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.tech-card{
+background:rgba(255,255,255,.06);
+padding:30px;
+border-radius:25px;
+transition:.4s;
+cursor:pointer;
+}
+
+.tech-card:hover{
+transform:translateY(-10px);
+}
+
+.tech-card img{
+width:100%;
+border-radius:20px;
+margin-bottom:15px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:20px;
+transition:.5s;
+cursor:pointer;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.timeline{
+border-left:4px solid #00ff88;
+padding-left:30px;
+}
+
+.timeline-item{
+margin-bottom:50px;
+}
+
+.quiz-box{
+max-width:700px;
+margin:auto;
+background:rgba(255,255,255,.07);
+padding:40px;
+border-radius:25px;
+text-align:center;
+}
+
+.quiz-box button{
+margin:10px;
+padding:12px 25px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+}
+
+.footer{
+padding:60px;
+text-align:center;
+background:#05110d;
+}
+
+.toggle{
+cursor:pointer;
+font-size:1.2rem;
+}
+
+.light{
+background:#f4f4f4;
+color:#111;
+}
+
+.light .card,
+.light .tech-card,
+.light .quiz-box{
+background:white;
+color:#111;
 }
 
 @media(max-width:768px){
-    header h1{
-        font-size:2.5rem;
-    }
 
-    header p{
-        font-size:1rem;
-    }
+.hero h1{
+font-size:2.7rem;
 }
+
+header{
+padding:15px;
+}
+
+nav{
+display:none;
+}
+
+}
+
 </style>
 </head>
+
 <body>
 
+<div id="particles-js"></div>
+
 <header>
-    <h1>Agrinho Paraná 2026</h1>
-    <p>
-        Agro forte, futuro sustentável:
-        equilíbrio entre produção e meio ambiente
-    </p>
-    <a href="#sobre" class="botao">Conhecer o Projeto</a>
-</header>
+
+<div class="logo">
+🌱 AGRINHO 2026
+</div>
 
 <nav>
-<ul>
-<li><a href="#sobre">Sobre</a></li>
-<li><a href="#agro">Agro Forte</a></li>
-<li><a href="#sustentabilidade">Sustentabilidade</a></li>
-<li><a href="#tecnologia">Tecnologia</a></li>
-<li><a href="#galeria">Galeria</a></li>
-</ul>
+<a href="#numeros">Números</a>
+<a href="#tecnologia">Tecnologia</a>
+<a href="#galeria">Galeria</a>
+<a href="#quiz">Quiz</a>
 </nav>
 
-<section id="sobre">
-<h2>Sobre o Agrinho</h2>
+<div class="toggle" onclick="toggleTheme()">
+🌙
+</div>
 
-<p>
-O Agrinho é um dos maiores programas educacionais do Brasil.
-Seu objetivo é promover a conscientização sobre cidadania,
-sustentabilidade, educação ambiental e a importância do agronegócio
-para a sociedade. Em 2026, o tema destaca a necessidade de unir
-produção agrícola e preservação ambiental para garantir um futuro
-mais equilibrado.
-</p>
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>
+AGRO FORTE<br>
+FUTURO SUSTENTÁVEL
+</h1>
+
+<div class="typing" id="typing"></div>
+
+<button class="btn"
+onclick="document.getElementById('numeros').scrollIntoView({behavior:'smooth'})">
+Explorar o Futuro
+</button>
+
+</div>
+
 </section>
 
-<section id="agro">
-<h2>Agro Forte</h2>
+<section id="numeros" class="section">
 
-<div class="cards">
+<h2 class="section-title">
+📊 Paraná em Números
+</h2>
 
-<div class="card">
-<h3>🌾 Produção de Alimentos</h3>
-<p>
-O campo produz os alimentos consumidos diariamente por milhões
-de pessoas, sendo essencial para a segurança alimentar.
-</p>
-</div>
+<div class="stats">
 
 <div class="card">
-<h3>🚜 Desenvolvimento Econômico</h3>
-<p>
-O agronegócio movimenta a economia, gera empregos e contribui
-para o crescimento do país.
-</p>
+<h2 class="counter" data-target="120">0</h2>
+<p>Milhões de toneladas produzidas</p>
 </div>
 
 <div class="card">
-<h3>🤝 Campo e Cidade</h3>
-<p>
-A conexão entre campo e cidade fortalece a sociedade e promove
-o desenvolvimento sustentável.
-</p>
+<h2 class="counter" data-target="399">0</h2>
+<p>Municípios conectados</p>
+</div>
+
+<div class="card">
+<h2 class="counter" data-target="95">0</h2>
+<p>% Agricultura Tecnológica</p>
+</div>
+
+<div class="card">
+<h2 class="counter" data-target="100">0</h2>
+<p>Projetos Sustentáveis</p>
 </div>
 
 </div>
+
 </section>
 
-<section id="sustentabilidade">
-<h2>Sustentabilidade</h2>
+<section id="tecnologia" class="section">
 
-<div class="cards">
+<h2 class="section-title">
+🚀 Tecnologias do Futuro
+</h2>
 
-<div class="card">
-<h3>💧 Uso Consciente da Água</h3>
-<p>
-A irrigação inteligente ajuda a economizar recursos hídricos.
-</p>
-</div>
+<div class="tech-grid">
 
-<div class="card">
-<h3>🌳 Preservação Ambiental</h3>
-<p>
-A proteção das florestas e nascentes garante equilíbrio ecológico.
-</p>
-</div>
-
-<div class="card">
-<h3>♻️ Produção Responsável</h3>
-<p>
-Práticas sustentáveis permitem produzir alimentos sem comprometer
-as futuras gerações.
-</p>
-</div>
-
-</div>
-</section>
-
-<section id="tecnologia">
-<h2>Tecnologia no Campo</h2>
-
-<div class="cards">
-
-<div class="card">
+<div class="tech-card">
+<img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f">
 <h3>🚁 Drones</h3>
-<p>
-Monitoram plantações e ajudam a identificar problemas rapidamente.
-</p>
+<p>Monitoramento inteligente das lavouras.</p>
 </div>
 
-<div class="card">
-<h3>📡 Sensores Inteligentes</h3>
-<p>
-Coletam dados sobre solo, clima e produtividade.
-</p>
+<div class="tech-card">
+<img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e">
+<h3>🤖 Inteligência Artificial</h3>
+<p>Previsões climáticas e otimização agrícola.</p>
 </div>
 
-<div class="card">
-<h3>☀️ Energia Renovável</h3>
-<p>
-O uso de energia solar reduz impactos ambientais e custos.
-</p>
+<div class="tech-card">
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+<h3>📡 Sensores IoT</h3>
+<p>Dados em tempo real para máxima eficiência.</p>
 </div>
 
 </div>
+
 </section>
 
-<section id="galeria">
-<h2>Galeria</h2>
+<section id="galeria" class="section">
 
-<div class="galeria">
+<h2 class="section-title">
+📸 Galeria Interativa
+</h2>
 
-<img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80">
+<div class="gallery">
 
-<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1200&q=80">
+<img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854">
 
-<img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80">
+<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399">
+
+<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6">
+
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
 
 </div>
+
 </section>
 
-<section>
-<h2>Conclusão</h2>
+<section class="section">
 
-<div class="conclusao">
-<p>
-O futuro da humanidade depende do equilíbrio entre produção e
-preservação ambiental. O Agrinho 2026 nos mostra que é possível
-fortalecer o agronegócio utilizando tecnologias sustentáveis e
-práticas responsáveis. Assim, garantimos alimentos, desenvolvimento
-econômico e qualidade de vida para as próximas gerações.
-</p>
+<h2 class="section-title">
+🕒 Evolução da Agricultura
+</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<h3>1950</h3>
+<p>Agricultura tradicional.</p>
 </div>
+
+<div class="timeline-item">
+<h3>2000</h3>
+<p>Mecanização e produtividade.</p>
+</div>
+
+<div class="timeline-item">
+<h3>2026</h3>
+<p>IA, drones e agricultura de precisão.</p>
+</div>
+
+<div class="timeline-item">
+<h3>2050</h3>
+<p>Robótica e sustentabilidade total.</p>
+</div>
+
+</div>
+
 </section>
 
-<footer>
+<section id="quiz" class="section">
+
+<h2 class="section-title">
+🏆 Quiz Agrinho
+</h2>
+<div class="quiz-box">
+
+<h3 id="question"></h3>
+
+<div id="answers"></div>
+
+<p id="result"></p>
+
+<h3 id="score"></h3>
+
+<button class="btn" onclick="startQuiz()">
+Reiniciar Quiz
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<h2>
+🌱 Agrinho 2026
+</h2>
+
 <p>
-Projeto desenvolvido para o Agrinho Paraná 2026 • 2º Ano do Ensino Médio
+Agro forte, futuro sustentável.
 </p>
+
 </footer>
+<section class="section">
+<section class="section">
+
+<h2 class="section-title">
+<h2 class="section-title">
+🚀 Agricultura do Futuro
+</h2>
+
+<div class="stats">
+
+<div class="card">
+<h2>🤖</h2>
+<p>Robôs realizando colheitas inteligentes.</p>
+</div>
+
+<div class="card">
+<h2>🛰️</h2>
+<p>Satélites monitorando plantações em tempo real.</p>
+</div>
+
+<div class="card">
+<h2>⚡</h2>
+<p>Energia limpa abastecendo fazendas sustentáveis.</p>
+</div>
+
+<div class="card">
+<h2>🌱</h2>
+<p>IA reduzindo desperdícios e protegendo o meio ambiente.</p>
+</div>
+
+</div>
+
+</section>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<script>
+
+particlesJS("particles-js",{
+particles:{
+number:{value:80},
+size:{value:3},
+move:{speed:2},
+color:{value:"#00ff88"},
+line_linked:{
+enable:true,
+color:"#00ff88"
+}
+}
+});
+
+const text =
+"Conectando campo, cidade, tecnologia e sustentabilidade.";
+
+let i=0;
+
+function type(){
+if(i<text.length){
+document.getElementById("typing").innerHTML+=text.charAt(i);
+i++;
+setTimeout(type,50);
+}
+}
+type();
+
+document.querySelectorAll('.counter').forEach(counter=>{
+
+let update=()=>{
+
+let target=+counter.dataset.target;
+let count=+counter.innerText;
+
+let inc=target/100;
+
+if(count<target){
+counter.innerText=Math.ceil(count+inc);
+setTimeout(update,20);
+}
+else{
+counter.innerText=target;
+}
+
+};
+
+update();
+
+});
+
+function correct(){
+
+document.getElementById("result").innerHTML=
+"🏅 Parabéns! Você ganhou uma medalha sustentável.";
+
+document.getElementById("result").style.color=
+"#00ff88";
+
+confetti({
+particleCount:150,
+spread:120
+});
+
+}
+
+function wrong(){
+document.getElementById("result").innerHTML=
+"❌ Tente novamente.";
+document.getElementById("result").style.color="red";
+}
+
+function toggleTheme(){
+document.body.classList.toggle("light");
+}
+const facts = [
+
+"🌽 O Paraná é um dos maiores produtores de milho do Brasil.",
+
+"🚜 Drones já são usados para monitorar lavouras.",
+
+"🌱 Agricultura sustentável ajuda a preservar rios e florestas.",
+
+"🤖 A Inteligência Artificial está transformando o agronegócio.",
+
+"🌎 O futuro da agricultura depende do equilíbrio com a natureza."
+
+];
+
+function newFact(){
+
+let random =
+Math.floor(Math.random()*facts.length);
+
+document.getElementById("fact").innerHTML =
+facts[random];
+
+}
+
+const quiz = [
+{
+q: "Qual prática reduz impacto ambiental na agricultura?",
+a: ["Plantio direto no solo", "Queima de resíduos", "Uso excessivo de pesticidas"],
+c: 0
+},
+{
+q: "O que é agricultura de precisão?",
+a: ["Uso de tecnologia no campo", "Plantio manual simples", "Desmatamento controlado"],
+c: 0
+},
+{
+q: "Qual tecnologia ajuda no monitoramento climático?",
+a: ["Sensores e IA", "Rádio antigo", "Calendário agrícola manual"],
+c: 0
+},
+{
+q: "Qual é o principal cultivo do Paraná?",
+a: ["Soja e milho", "Café da neve", "Algodão polar"],
+c: 0
+}
+];
+
+let current = 0;
+let points = 0;
+
+function startQuiz(){
+current = 0;
+points = 0;
+loadQuestion();
+}
+
+function loadQuestion(){
+
+if(current >= quiz.length){
+finishQuiz();
+return;
+}
+
+let q = quiz[current];
+
+document.getElementById("question").innerHTML = q.q;
+
+let html = "";
+
+q.a.forEach((ans, index)=>{
+
+html += `
+<button class="btn" onclick="check(${index})">
+${ans}
+</button>
+`;
+
+});
+
+document.getElementById("answers").innerHTML = html;
+}
+
+function check(i){
+
+if(i === quiz[current].c){
+points++;
+document.getElementById("result").innerHTML = "✔ Correto!";
+document.getElementById("result").style.color = "#00ff88";
+}else{
+document.getElementById("result").innerHTML = "❌ Errado!";
+document.getElementById("result").style.color = "red";
+}
+
+current++;
+
+setTimeout(loadQuestion, 800);
+
+}
+
+function finishQuiz(){
+
+document.getElementById("question").innerHTML =
+"Quiz finalizado!";
+
+document.getElementById("answers").innerHTML = "";
+
+document.getElementById("score").innerHTML =
+"Pontuação: " + points + " / " + quiz.length;
+
+if(points === quiz.length){
+confetti({
+particleCount: 200,
+spread: 160
+});
+}
+
+}
+
+startQuiz();
+
+</script>
+
+}
 
 </body>
 </html>
