@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agrinho Paraná 2026</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Segoe UI, Arial, sans-serif;
+    background:#f5fff6;
+    color:#333;
+}
+
+header{
+    height:100vh;
+    background:linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+    url("https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1600&q=80");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+header h1{
+    font-size:4rem;
+    margin-bottom:15px;
+}
+
+header p{
+    font-size:1.3rem;
+    max-width:900px;
+}
+
+.botao{
+    margin-top:30px;
+    background:#2e8b57;
+    color:white;
+    text-decoration:none;
+    padding:14px 30px;
+    border-radius:30px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.botao:hover{
+    background:#236944;
+}
+
+nav{
+    background:#2e8b57;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    list-style:none;
+}
+
+nav li{
+    margin:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+section{
+    padding:80px 10%;
+}
+
+h2{
+    text-align:center;
+    color:#2e8b57;
+    margin-bottom:25px;
+    font-size:2.2rem;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.card h3{
+    color:#2e8b57;
+    margin-bottom:10px;
+}
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.galeria img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+.conclusao{
+    background:white;
+    border-radius:15px;
+    padding:30px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+footer{
+    background:#2e8b57;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:768px){
+    header h1{
+        font-size:2.5rem;
+    }
+
+    header p{
+        font-size:1rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Agrinho Paraná 2026</h1>
+    <p>
+        Agro forte, futuro sustentável:
+        equilíbrio entre produção e meio ambiente
+    </p>
+    <a href="#sobre" class="botao">Conhecer o Projeto</a>
+</header>
+
+<nav>
+<ul>
+<li><a href="#sobre">Sobre</a></li>
+<li><a href="#agro">Agro Forte</a></li>
+<li><a href="#sustentabilidade">Sustentabilidade</a></li>
+<li><a href="#tecnologia">Tecnologia</a></li>
+<li><a href="#galeria">Galeria</a></li>
+</ul>
+</nav>
+
+<section id="sobre">
+<h2>Sobre o Agrinho</h2>
+
+<p>
+O Agrinho é um dos maiores programas educacionais do Brasil.
+Seu objetivo é promover a conscientização sobre cidadania,
+sustentabilidade, educação ambiental e a importância do agronegócio
+para a sociedade. Em 2026, o tema destaca a necessidade de unir
+produção agrícola e preservação ambiental para garantir um futuro
+mais equilibrado.
+</p>
+</section>
+
+<section id="agro">
+<h2>Agro Forte</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🌾 Produção de Alimentos</h3>
+<p>
+O campo produz os alimentos consumidos diariamente por milhões
+de pessoas, sendo essencial para a segurança alimentar.
+</p>
+</div>
+
+<div class="card">
+<h3>🚜 Desenvolvimento Econômico</h3>
+<p>
+O agronegócio movimenta a economia, gera empregos e contribui
+para o crescimento do país.
+</p>
+</div>
+
+<div class="card">
+<h3>🤝 Campo e Cidade</h3>
+<p>
+A conexão entre campo e cidade fortalece a sociedade e promove
+o desenvolvimento sustentável.
+</p>
+</div>
+
+</div>
+</section>
+
+<section id="sustentabilidade">
+<h2>Sustentabilidade</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>💧 Uso Consciente da Água</h3>
+<p>
+A irrigação inteligente ajuda a economizar recursos hídricos.
+</p>
+</div>
+
+<div class="card">
+<h3>🌳 Preservação Ambiental</h3>
+<p>
+A proteção das florestas e nascentes garante equilíbrio ecológico.
+</p>
+</div>
+
+<div class="card">
+<h3>♻️ Produção Responsável</h3>
+<p>
+Práticas sustentáveis permitem produzir alimentos sem comprometer
+as futuras gerações.
+</p>
+</div>
+
+</div>
+</section>
+
+<section id="tecnologia">
+<h2>Tecnologia no Campo</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🚁 Drones</h3>
+<p>
+Monitoram plantações e ajudam a identificar problemas rapidamente.
+</p>
+</div>
+
+<div class="card">
+<h3>📡 Sensores Inteligentes</h3>
+<p>
+Coletam dados sobre solo, clima e produtividade.
+</p>
+</div>
+
+<div class="card">
+<h3>☀️ Energia Renovável</h3>
+<p>
+O uso de energia solar reduz impactos ambientais e custos.
+</p>
+</div>
+
+</div>
+</section>
+
+<section id="galeria">
+<h2>Galeria</h2>
+
+<div class="galeria">
+
+<img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80">
+
+<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1200&q=80">
+
+<img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80">
+
+</div>
+</section>
+
+<section>
+<h2>Conclusão</h2>
+
+<div class="conclusao">
+<p>
+O futuro da humanidade depende do equilíbrio entre produção e
+preservação ambiental. O Agrinho 2026 nos mostra que é possível
+fortalecer o agronegócio utilizando tecnologias sustentáveis e
+práticas responsáveis. Assim, garantimos alimentos, desenvolvimento
+econômico e qualidade de vida para as próximas gerações.
+</p>
+</div>
+</section>
+
+<footer>
+<p>
+Projeto desenvolvido para o Agrinho Paraná 2026 • 2º Ano do Ensino Médio
+</p>
+</footer>
+
+</body>
+</html>
